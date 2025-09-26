@@ -1,36 +1,171 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Multilingual Hello World
 
-## Getting Started
+A Next.js application that displays "Hello World" in 20 different languages with cycling functionality. Built to test and verify the complete development workflow from local development to GitHub version control and Vercel deployment.
 
-First, run the development server:
+## 🌍 Features
 
+- **20 Languages**: Cycle through Hello World greetings in 20 different languages
+- **Interactive UI**: Previous/Next buttons and main cycling button
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Dark Mode Support**: Automatic dark/light mode switching
+- **Modern Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
+- **Smooth Animations**: Transitions between language changes
+
+## 🚀 Live Demo
+
+Visit the live application: [https://hello-world-multilingual-1uw6nsppe-michael-koetters-projects.vercel.app](https://hello-world-multilingual-1uw6nsppe-michael-koetters-projects.vercel.app)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.5.4 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+- **Version Control**: Git & GitHub
+
+## 🌐 Supported Languages
+
+1. English - Hello World
+2. Spanish - Hola Mundo
+3. French - Bonjour le Monde
+4. German - Hallo Welt
+5. Italian - Ciao Mondo
+6. Portuguese - Olá Mundo
+7. Chinese - 你好世界
+8. Japanese - こんにちは世界
+9. Korean - 안녕하세요 세계
+10. Russian - Привет мир
+11. Arabic - مرحبا بالعالم
+12. Hindi - नमस्ते दुनिया
+13. Dutch - Hallo Wereld
+14. Swedish - Hej Världen
+15. Polish - Witaj Świecie
+16. Turkish - Merhaba Dünya
+17. Greek - Γεια σου Κόσμε
+18. Hebrew - שלום עולם
+19. Thai - สวัสดีโลก
+20. Vietnamese - Xin chào thế giới
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/mkoetter/hello-world-multilingual.git
+cd hello-world-multilingual
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+hello-world-multilingual/
+├── src/
+│   └── app/
+│       ├── page.tsx          # Main application component
+│       ├── layout.tsx         # Root layout
+│       └── globals.css        # Global styles
+├── public/                    # Static assets
+├── next.config.ts            # Next.js configuration
+├── tailwind.config.ts        # Tailwind CSS configuration
+└── package.json              # Dependencies and scripts
+```
 
-## Learn More
+## 🔄 Development Workflow
 
-To learn more about Next.js, take a look at the following resources:
+This project demonstrates the complete development workflow:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Local Development**: Next.js dev server with hot reload
+2. **Version Control**: Git commits and GitHub repository
+3. **Deployment**: Automatic Vercel deployment from GitHub
+4. **Production**: Live application with static optimization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+### Automatic Deployment (Recommended)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is configured for automatic deployment:
+- Push to `main` branch triggers Vercel deployment
+- Connected GitHub repository for continuous deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Manual Deployment
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy to production
+vercel --prod
+```
+
+## 🎨 Customization
+
+### Adding New Languages
+
+Edit the `translations` array in `src/app/page.tsx`:
+
+```typescript
+const translations = [
+  { language: 'Your Language', greeting: 'Your Greeting', code: 'xx' },
+  // ... existing translations
+];
+```
+
+### Styling Changes
+
+Modify Tailwind classes in `src/app/page.tsx` or add custom CSS to `src/app/globals.css`.
+
+## 📝 Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Deployed on [Vercel](https://vercel.com/)
+- Translations sourced from native speakers and Google Translate
+
+---
+
+**Purpose**: This application was created to test and verify the complete development environment setup, including local development, GitHub integration, and Vercel deployment workflows.
